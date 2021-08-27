@@ -1,0 +1,35 @@
+@import './../../../styles/utils/variables';
+@import './../../../styles/utils/mixins';
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 21px;
+    padding: 15px 40px;
+    @include respond-to('medium') {
+        padding: 0;
+    }
+
+    button {
+        border-radius: $radius8;
+        background: $gray;
+        color: $white;
+        width: 202px;
+        height: 48px;
+        margin: 0 16px 0 0;
+        @include transition(0.3s);
+        font: {
+            size: $text20px;
+            weight: $weight-medium;
+        }
+        &:hover {
+            background: darken($gray, 5%);
+        }
+        &:last-child {
+            margin: 0;
+        }
+        &.active {
+            background: $primary;
+        }
+    }
+}

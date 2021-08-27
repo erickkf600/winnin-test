@@ -1,0 +1,23 @@
+@import './../../styles/utils/mixins';
+@import './../../styles/utils/variables';
+
+.header {
+    width: 100%;
+    height: 91px;
+    background: $primary;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        color: $white;
+        font: {
+            weight: $weight-bold;
+            size: $header36px;
+        }
+        span {
+            color: $golden;
+        }
+    }
+}

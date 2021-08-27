@@ -1,0 +1,28 @@
+.dark-bg-clear {
+    &:not(.active) {
+        background: $dark-clear !important;
+    }
+}
+.dark-bg-medium {
+    background: $dark-medium !important;
+}
+.dark-bg {
+    background: $dark !important;
+}
+
+.dark-color {
+    p,
+    b,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h3 {
+        color: $white !important;
+    }
+}
+
+.dark-color-small {
+    color: $gray !important;
+}
