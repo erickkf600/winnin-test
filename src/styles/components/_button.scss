@@ -1,0 +1,18 @@
+.btn {
+    width: 100%;
+    background: $primary;
+    border-radius: $radius8;
+    height: 48px;
+    margin: 15px 0 20px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: {
+        size: $text20px;
+        weight: $weight-medium;
+    }
+    span {
+        margin-right: 13px;
+    }
+}

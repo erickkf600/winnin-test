@@ -1,17 +1,19 @@
 export interface ApiResponse {
     kind: string
-    data: Data
+    data: ContentData
 }
-interface Data {
+export interface ContentData {
+    after: string
     children: ChildrenData[] | undefined
 }
 export interface ChildrenData {
+    next?: string
     data: {
         thumbnail: string
         created: number
         subreddit_id: string
         id: string
         url: string
-        author_name: string
+        author: string
     }
 }

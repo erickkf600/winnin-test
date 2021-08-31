@@ -33,6 +33,15 @@ button {
         border: none;
     }
 }
+input {
+    &:focus {
+        outline: none;
+    }
+}
+.input-error-msg {
+    font-size: $text12px;
+    color: $red;
+}
 //CONTAINER
 .container {
     width: 100%;
@@ -73,4 +82,39 @@ p {
     margin: 0;
     padding: 0;
     background: transparent;
+}
+
+.btn-loader {
+    position: relative;
+    user-select: none;
+    @include transition(0.3s);
+    background: $primary;
+    &:before {
+        content: '';
+        width: 1.2em;
+        height: 1.2em;
+        position: absolute;
+        left: calc(50% - 0.75em);
+        top: calc(50% - 0.75em);
+        border: 0.2em solid transparent;
+        border-right-color: $white;
+        border-radius: 50%;
+        opacity: 0;
+    }
+    &--start {
+        color: transparent !important;
+        pointer-events: none;
+        &:before {
+            opacity: 1;
+            animation: button-anim 0.7s linear infinite;
+        }
+    }
+}
+@keyframes button-anim {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

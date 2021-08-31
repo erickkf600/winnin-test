@@ -2,9 +2,7 @@
 @import './../../styles/utils/variables';
 
 .toggle-button {
-    position: absolute;
-    top: 27px;
-    right: 17px;
+    position: relative;
     width: 74px;
     height: 36px;
     overflow: hidden;

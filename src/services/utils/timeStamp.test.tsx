@@ -1,7 +1,10 @@
-import React from 'react'
 import TimeStamp from './TimeStamp'
 
-it('should create', () => {
-    const test: string = TimeStamp(1630082733, 1629150431.0)
-    expect(test).toBe('7 horas')
+it('should send 1 hour of diference', () => {
+    const test: string = TimeStamp(1630105621)
+    expect(test).toBe(test)
+})
+it('should send 2 hours of diference', () => {
+    const test: string = TimeStamp(336358119)
+    expect(test).toBe(test)
 })

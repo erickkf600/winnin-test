@@ -1,15 +1,46 @@
-import React, { useState } from 'react'
-import Template from './Template'
+import React from 'react'
+import cx from 'classnames'
 import './filter.scss'
 
-const Filter = ({ darkMode }: { darkMode: boolean }) => {
-    const [filterBy, setFilterBy] = useState<string>('hot')
+interface Filter {
+    darkMode: boolean
+    filterBy: string
+    setFilter: any
+}
+const Filter = ({ darkMode, filterBy, setFilter }: Filter) => {
     return (
-        <Template
-            filterBy={filterBy}
-            darkMode={darkMode}
-            setFilterBy={(e: string) => setFilterBy(e)}
-        />
+        <div className="filter" data-testid="filter">
+            <button
+                data-testid="filter-button"
+                onClick={() => setFilter('hot')}
+                className={cx({
+                    active: filterBy == 'hot',
+                    'dark-bg-clear': darkMode,
+                })}
+            >
+                Hot
+            </button>
+            <button
+                data-testid="filter-button"
+                onClick={() => setFilter('new')}
+                className={cx({
+                    active: filterBy == 'new',
+                    'dark-bg-clear': darkMode,
+                })}
+            >
+                News
+            </button>
+            <button
+                data-testid="filter-button"
+                onClick={() => setFilter('rising')}
+                className={cx({
+                    active: filterBy == 'rising',
+                    'dark-bg-clear': darkMode,
+                })}
+            >
+                Rising
+            </button>
+        </div>
     )
 }
 

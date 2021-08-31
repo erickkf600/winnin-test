@@ -1,16 +1,15 @@
-import React, { createRef, useContext } from 'react'
-import { ThemeContext } from '../../services/providers/Theme.provider'
-import Template from './Template'
+import React from 'react'
+import { useDarkMode } from '../../services/providers/Theme.provider'
 import './toggle-button.scss'
+import ToggleButtonView from './toggle-button.view'
 
 const ToggleButton = () => {
-    const { darkMode, setDarkMode } = useContext(ThemeContext)
-    const toggle = createRef()
+    const { darkMode, setDarkMode } = useDarkMode()
+
     return (
-        <Template
-            toggle={toggle}
+        <ToggleButtonView
             darkMode={darkMode}
-            setDarkMode={(e: any) => setDarkMode(e)}
+            setDarkMode={() => setDarkMode(!darkMode)}
         />
     )
 }

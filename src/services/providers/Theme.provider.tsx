@@ -5,7 +5,7 @@ export const ThemeContext = createContext<{
     setDarkMode: any
 }>({
     darkMode: false,
-    setDarkMode: false,
+    setDarkMode: () => {},
 })
 
 export const ThemeProvider = (props: any) => {
