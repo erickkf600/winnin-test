@@ -54,15 +54,20 @@ Executando o projeto:
 
     $ npm install
 
-    $ npm start
-
 ---
 
 <br />
 
 -   finalizada a clonagem, edite o arquivo `example.env.local` para `.env.local`
 
+---
+
+    $ npm run start:dev
+
+---
+
 <br />
+
 Dados para autenticação:
 
 ---
